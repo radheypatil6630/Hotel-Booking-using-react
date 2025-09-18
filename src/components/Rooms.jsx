@@ -10,11 +10,11 @@ import Footer from './Footer'
 
 const Rooms = () => {
   const rooms = [
-    { id: 1, image: room_img },
-    { id: 2, image: lawn_img },
-    { id: 3, image: restaurant_img },
-    { id: 4, image: hall_img },
-    { id: 5, image: bar_img },
+    { id: 1,type:"DELUXE ROOM", image: room_img },
+    { id: 2,type:"EXECUTIVE ROOM", image: lawn_img },
+    { id: 3,type:"STANDARD ROOM", image: restaurant_img },
+    { id: 4,type:"DELUXE ROOM", image: hall_img },
+    { id: 5,type:"DELUXE ROOM ", image: bar_img },
   ];
 
   const amenities = [

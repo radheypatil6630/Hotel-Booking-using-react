@@ -16,7 +16,7 @@ function AboutSection() {
       <div className="relative flex flex-col lg:flex-row items-center max-w-full mx-auto">
         
         {/* === Text Content Section === */}
-        <div className="relative z-10 w-full lg:w-3/5 bg-[#0d4a4e] text-white p-8 md:p-16 min-h-[600px] flex flex-col justify-center">
+        <div className="relative z-10 w-full lg:w-4/6 bg-[#0d4a4e] text-white p-8 md:p-16 min-h-[600px] flex flex-col justify-center">
           
           <p className="font-semibold text-yellow-400 tracking-widest uppercase mb-2">
             A World of Comfort
@@ -53,7 +53,7 @@ function AboutSection() {
             <img 
               src={imageSmall} 
               alt="Comfortable hotel room bed" 
-              className="absolute bottom-0 left-0 w-1/2 lg:w-[55%] h-1/2 lg:h-[45%] object-cover rounded-tr-[50px] lg:rounded-tr-[80px] border-8 border-[#0d4a4e] shadow-2xl" 
+              className="absolute bottom-0 left-0 w-1/2 lg:w-[55%] h-1/2 lg:h-[45%] object-cover rounded-tr-[50px] lg:rounded-tr-[80px] border-8 border-[#0d4a4e] shadow-2xl z-10" 
             />
           </div>
         </div>
