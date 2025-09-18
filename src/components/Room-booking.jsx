@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Footer from './Footer';
 import { FaCalendarAlt, FaUserFriends, FaBed, FaStar } from 'react-icons/fa';
 
 // --- Helper Data (no changes) ---
@@ -56,7 +57,7 @@ const RoomBooking = () => {
   const totalPrice = currentRoom.price * (totalNights > 0 ? totalNights : 1);
 
   return (
-   
+   <div>
     <div 
       className="relative min-h-screen w-full bg-cover bg-center filter  " 
       style={{ backgroundImage: `url(${roomData.deluxe.image})` }} 
@@ -67,7 +68,7 @@ const RoomBooking = () => {
       {/* --- Main content wrapper - now needs relative and z-10 --- */}
       <div className="relative z-10 container mx-auto p-4 md:p-8 ">
         {/* --- Header --- */}
-        <header className="text-center mb-8 md:mb-12 lg:pt-12">
+        <header className="text-center mb-8 md:mb-12 pt-12">
           {/* Changed text color to white for contrast against dark overlay */}
           <h1 className="text-4xl md:text-5xl font-bold text-white font-serif">Book Your Stay</h1>
           <p className="text-gray-200 mt-2">Experience luxury and comfort like never before.</p>
@@ -159,6 +160,8 @@ const RoomBooking = () => {
           </div>
         </div>
       </div>
+</div>
+      <Footer />
     </div>
   );
 }
