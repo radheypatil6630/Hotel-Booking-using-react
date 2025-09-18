@@ -1,22 +1,24 @@
 
 import Hero from './Hero'
-import image1 from '../assets/lobby3.png'
+import family_restaurant from '../assets/lobby3.png'
+import room_img  from '../assets/room1.jpg'
+import lawn_img from '../assets/lawn1.jpg'
+import restaurant_img from '../assets/restaurant1.jpg'
+import hall_img from '../assets/banquet_hall1.jpg'
+import bar_img from '../assets/bar1.jpg'
 import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faContactBook, faLocation } from "@fortawesome/free-solid-svg-icons";
+import Footer from './Footer'
 
 const Home = () => {
   const [current, setCurrent] = useState(0);
   const cards = [
-    { title: "Moder Comfort", image: image1 },
-    { title: "Moder Comfort", image: image1 },
-    { title: "Moder Comfort", image: image1 },
-    { title: "Moder Comfort", image: image1 },
-    { title: "Moder Comfort", image: image1 },
-    { title: "Moder Comfort", image: image1 },
-    { title: "Moder Comfort", image: image1 },
-    { title: "Moder Comfort", image: image1 },
-    { title: "Moder Comfort", image: image1 },
+    { title: "Deluxe AC Room", image: room_img },
+    { title: "Vrundavan Multipurpose Lawn", image: lawn_img },
+    { title: "Mithila Family Restaurant", image: restaurant_img },
+    { title: "Luvkush Banquet Hall", image: hall_img },
+    { title: "Texas Restaurant & Bar", image: bar_img },
   ]
 
   useEffect(() => {
@@ -61,7 +63,7 @@ const Home = () => {
                style={{ transform: `translateX(-${current * 316}px)` }}
             >
               {cards.map((card, index) => (
-                  <div key={index} className='w-[300px] flex-shrink-0 flex  flex-col item-center bg-[#f8f4ec] text-black font-semibold p-8  m-4 gap-8 hover:bg-[#0d4a4e] hover:text-white transition duration-300  '
+                  <div key={index} className='w-[300px] flex-shrink-0 flex  flex-col item-center rounded-lg bg-[#f8f4ec] text-black font-semibold p-8  m-4 gap-8 hover:bg-[#0d4a4e] hover:text-white transition duration-300  '
                  >
                     
                     
@@ -109,7 +111,7 @@ const Home = () => {
           </div>
         </div>
         <div className='absolute left-4 bottom-4 flex gap-2 text-sm'>
-          <img src={image1} alt="Gym" className='w-12 h-12 object-cover rounded-sm '/>
+          <img src={room_img} alt="Gym" className='w-12 h-12 object-cover rounded-sm '/>
         <span className='flex flex-col'>
             <p>Get Collects to Our Membership</p>
             <p>Exclusive benefits and offers await you.</p>
@@ -117,7 +119,7 @@ const Home = () => {
         </div>
         </div>
       <div className='w-1/2'>
-      <img className='w-full h-full' src={image1}/>
+      <img className='w-full h-full' src={room_img}/>
       </div>
      </div>
 
@@ -128,7 +130,7 @@ const Home = () => {
       <p className='font-bold text-4xl font-serif text-black'>Of Refined Comfort of Living</p>
 
       <div className='flex gap-4 p-4'>
-        <img className='w-2/3 h-[300px] p-2 shadow-lg shadow-black' src={image1}/>
+        <img className='w-2/3 h-[300px] p-2 shadow-lg shadow-black' src={room_img}/>
         <p className='text-md text-black p-4'>Ensuring a seamless blend of comfort & luxury. Each space is thoughtfully designed to provide the ultimate in relaxation & refinement.</p>
       </div>
 
@@ -136,18 +138,20 @@ const Home = () => {
       <div className='relative w-1/4 rounded-xl '>
           <img
     className="w-full h-[300px] object-cover rounded-xl pl-12   shadow-[2px_2px_0px_rgba(0,0,0,0.2)] shadow-black"
-    src={image1}
+    src={room_img}
     alt="Main"
   />
 
  
   <img
     className="w-[200px] h-[250px] object-cover rounded-lg absolute bottom-20 left-0 border-2 border-white shadow-lg shadow-black"
-    src={image1}
+    src={room_img}
     alt="Overlay"
   />
       </div>
     </div>
+
+    <Footer/>
     </div >
   )
 }
