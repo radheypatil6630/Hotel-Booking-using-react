@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import Footer from './Footer';
 import { FaCalendarAlt, FaUserFriends, FaBed, FaStar } from 'react-icons/fa';
 
-// --- Helper Data (no changes) ---
 const roomData = {
   deluxe: {
     name: 'Deluxe King Room',
     price: 12000,
-    image: 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6', // This will be the main background image
+    image: 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6', 
     rating: 4.8,
     size: '35 sq m',
     beds: '1 King Bed',
@@ -48,7 +47,7 @@ const RoomBooking = () => {
     setSelectedRoom(e.target.value);
   };
 
-  const currentRoom = roomData[selectedRoom]; // This `currentRoom.image` is still used for the preview card
+  const currentRoom = roomData[selectedRoom]; 
   
   const totalNights = (bookingDetails.checkIn && bookingDetails.checkOut)
     ? (new Date(bookingDetails.checkOut) - new Date(bookingDetails.checkIn)) / (1000 * 3600 * 24)
@@ -65,22 +64,21 @@ const RoomBooking = () => {
       
       <div className="absolute inset-0 bg-black opacity-60"></div> 
 
-      {/* --- Main content wrapper - now needs relative and z-10 --- */}
+   
       <div className="relative z-10 container mx-auto p-4 md:p-8 ">
-        {/* --- Header --- */}
+    
         <header className="text-center mb-8 md:mb-12 pt-12">
-          {/* Changed text color to white for contrast against dark overlay */}
+   
           <h1 className="text-4xl md:text-5xl font-bold text-white font-serif">Book Your Stay</h1>
           <p className="text-gray-200 mt-2">Experience luxury and comfort like never before.</p>
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          
-          {/* --- Booking Form (Left Column) - Keep light/white for contrast with blurred background --- */}
-          <div className="lg:col-span-2 bg-white p-6 md:p-8 rounded-2xl shadow-lg"> {/* Form background is white */}
+    
+          <div className="lg:col-span-2 bg-white p-6 md:p-8 rounded-2xl shadow-lg"> 
             <h2 className="text-2xl font-bold text-[#0d4a4e] mb-6">Reservation Details</h2>
             <form className="space-y-6">
-              {/* Dates */}
+            
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="relative">
                   <label htmlFor="checkIn" className="block text-sm font-medium text-gray-600 mb-1">Check-in Date</label>
@@ -93,8 +91,7 @@ const RoomBooking = () => {
                   <input type="date" name="checkOut" id="checkOut" value={bookingDetails.checkOut} onChange={handleInputChange} className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition"/>
                 </div>
               </div>
-              
-              {/* Guests */}
+        
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="relative">
                   <label htmlFor="adults" className="block text-sm font-medium text-gray-600 mb-1">Adults</label>
@@ -112,7 +109,7 @@ const RoomBooking = () => {
                 </div>
               </div>
 
-              {/* Room Type */}
+           
               <div className="relative">
                 <label htmlFor="roomType" className="block text-sm font-medium text-gray-600 mb-1">Room Type</label>
                 <FaBed className="absolute top-9 left-3 text-gray-400" />
@@ -123,7 +120,7 @@ const RoomBooking = () => {
                 </select>
               </div>
 
-              {/* Submit Button */}
+              
               <div className="pt-4">
                 <button type="submit" className="w-full bg-yellow-500 text-black font-bold py-3 px-4 rounded-lg hover:bg-yellow-400 transition-transform transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-300">
                   Check Availability
@@ -132,7 +129,7 @@ const RoomBooking = () => {
             </form>
           </div>
           
-          {/* --- Room Preview (Right Column) --- */}
+          
           <div className="lg:col-span-1">
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden sticky top-8">
               <img src={currentRoom.image} alt={currentRoom.name} className="w-full h-56 object-cover" />

@@ -15,7 +15,7 @@ function AboutSection() {
     <section className="bg-white">
       <div className="relative flex flex-col lg:flex-row items-center max-w-full mx-auto">
         
-        {/* === Text Content Section === */}
+     
         <div className="relative z-10 w-full lg:w-4/6 bg-[#0d4a4e] text-white p-8 md:p-16 min-h-[600px] flex flex-col justify-center">
           
           <p className="font-semibold text-yellow-400 tracking-widest uppercase mb-2">
@@ -42,7 +42,6 @@ function AboutSection() {
           </div>
         </div>
 
-        {/* === Image Gallery Section === */}
         <div className="w-full lg:w-2/5 h-[400px] lg:h-auto lg:absolute lg:top-0 lg:right-0 lg:bottom-0">
           <div className="relative w-full h-full">
             <img 
