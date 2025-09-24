@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-const adminModel = require('./../model')
+const {AdminModel} = require('../model')
 
 
 router.post('/admin_login', async (req, res) => {
     try {
         const { name, password } = req.body;
 
-        const admin = await adminModel.findOne({ name, password });
+        const admin = await AdminModel.findOne({ name, password });
 
         if (admin) {
             res.status(200).json({

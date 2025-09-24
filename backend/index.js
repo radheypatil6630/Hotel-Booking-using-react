@@ -13,7 +13,7 @@ app.use(express.json());
 const connectDB = require('./db');
 connectDB();
 
-const apiRoutes = require('./routes/api')
+const apiRoutes = require('./routes/AdminLoginApi')
 app.use('/api',apiRoutes);
 
 
