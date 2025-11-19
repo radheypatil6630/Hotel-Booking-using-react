@@ -16,6 +16,12 @@ connectDB();
 const apiRoutes = require('./routes/AdminLoginApi')
 app.use('/api',apiRoutes);
 
+const roomsApi = require('./routes/RoomsApi')
+app.use('/api/rooms', roomsApi);
+
+const bookingApi = require('./routes/BookingApi')
+app.use('/api/bookings', bookingApi);
+
 
 
 
